@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activites.MakeRequestActivity">
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:padding="16dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Ecrire un message pour les donneur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <FrameLayout
+            android:layout_margin="10dp"
+            android:background="@drawable/border_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/message_input"
+            android:textSize="15dp"
+            android:hint="Message"
+            android:padding="10dp"
+            android:minLines="6"
+            android:maxLines="10"
+            android:cursorVisible="false"
+            android:background="@null"
+            android:textColorHint="@android:color/black"
+            android:gravity="top"
+            android:textAlignment="gravity"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        </FrameLayout>
+        
+        <LinearLayout
+            android:id="@+id/layout_photo"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/post_image"
+                android:padding="8dp"
+                android:src="@drawable/request_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"/>
+
+            <TextView
+                android:id="@+id/choose_text"
+                android:gravity="center"
+                android:textAlignment="gravity"
+                android:text="@string/choisir_image"
+                android:textStyle="bold"
+                android:textSize="23sp"
+                android:textColor="@color/orange1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/orange1"
+            android:elevation="0dp"
+            android:text="Poster la demande"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/layout_photo"
+            app:layout_constraintTop_toBottomOf="@id/layout_photo" />
+    </LinearLayout>
+
+</ScrollView>

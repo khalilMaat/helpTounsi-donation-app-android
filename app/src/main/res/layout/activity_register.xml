@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activites.LoginActivity">
+
+    <ImageView
+        android:id="@+id/iv_circle"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="-100dp"
+        android:layout_marginTop="-100dp"
+        android:src="@drawable/circle"
+        app:tint="@color/orange2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="-190dp"
+        android:src="@drawable/circle"
+        app:tint="@color/orange1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginEnd="-100dp"
+        android:layout_marginBottom="-40dp"
+        android:src="@drawable/circle"
+        app:tint="@color/orange2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_marginBottom="-240dp"
+        android:src="@drawable/circle"
+        app:tint="@color/orange1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="-10dp"
+        android:text="Register"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_circle"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-80dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginTop="40dp"
+        app:contentPaddingTop="16dp"
+        app:contentPaddingBottom="16dp"
+        android:backgroundTint="@color/white"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_register">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_register_username"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="110dp"
+                android:src="@drawable/user"
+                android:scaleType="fitXY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="48dp"
+                android:hint="votre nom"
+                android:inputType="text"
+                android:textColorHint="@color/black"
+                android:background="@color/white"
+                app:layout_constraintStart_toEndOf="@id/iv_register_username"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_register_username"
+                app:layout_constraintBottom_toBottomOf="@id/iv_register_username"/>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_register_username"/>
+
+            <ImageView
+                android:id="@+id/iv_register_city"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/baseline_location_on_24"
+                android:tint="@color/black"
+                android:scaleType="fitXY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view1" />
+            <EditText
+                android:id="@+id/city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="48dp"
+                android:hint="votre lieu"
+                android:inputType="text"
+                android:textColorHint="@color/black"
+                android:background="@color/white"
+                app:layout_constraintStart_toEndOf="@id/iv_register_city"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_register_city"
+                app:layout_constraintBottom_toBottomOf="@id/iv_register_city"/>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_register_city"/>
+
+            <ImageView
+                android:id="@+id/iv_register_phone"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/baseline_call_24"
+                android:tint="@color/black"
+                android:scaleType="fitXY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view2" />
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="48dp"
+                android:hint="votre numero de telephone"
+                android:inputType="phone"
+                android:textColorHint="@color/black"
+                android:background="@color/white"
+                app:layout_constraintStart_toEndOf="@id/iv_register_phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_register_phone"
+                app:layout_constraintBottom_toBottomOf="@id/iv_register_phone"/>
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_register_phone"/>
+
+            <ImageView
+                android:id="@+id/iv_register_password"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/locked"
+                android:tint="@color/black"
+                android:scaleType="fitXY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view3" />
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="48dp"
+                android:hint="votre mot de passe"
+                android:inputType="textPassword"
+                android:textColorHint="@color/black"
+                android:background="@color/white"
+                app:layout_constraintStart_toEndOf="@id/iv_register_password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_register_password"
+                app:layout_constraintBottom_toBottomOf="@id/iv_register_password"/>
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_register_password"/>
+
+            <ImageView
+                android:id="@+id/iv_register_confirm_password"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/locked"
+                android:tint="@color/black"
+                android:scaleType="fitXY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view4" />
+            <EditText
+                android:id="@+id/confirm_password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="48dp"
+                android:hint="confirmer"
+                android:inputType="textPassword"
+                android:textColorHint="@color/black"
+                android:background="@color/white"
+                app:layout_constraintStart_toEndOf="@id/iv_register_confirm_password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_register_confirm_password"
+                app:layout_constraintBottom_toBottomOf="@id/iv_register_confirm_password"/>
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/submit_button_R"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="20dp"
+        android:text="Enregistrer"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/orange1"
+        android:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="@id/cv_container"
+        app:layout_constraintTop_toBottomOf="@id/cv_container"
+        />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-25dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_container">
+
+        <Button
+            android:id="@+id/sign_up_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity=""
+            android:paddingStart="30dp"
+            android:layout_marginTop="20dp"
+            android:paddingEnd="20dp"
+            android:text="Login"
+            android:textColor="@android:color/holo_red_dark"
+            android:textAllCaps="true"
+            android:background="@android:color/transparent"
+            android:elevation="0dp"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+<!--<ScrollView-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="@android:color/white"-->
+<!--    tools:context=".Activites.RegisterActivity">-->
+<!--    -->
+<!--    <LinearLayout-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--        <TextView-->
+<!--            android:textColor="@android:color/black"-->
+<!--            android:text="Ahla bel Tounsi Your Details will be public to the community\nTO HELP OTHERS"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="25sp"-->
+<!--            android:padding="12dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_width="match_parent"/>-->
+
+<!--        &lt;!&ndash;Input Formulaire&ndash;&gt;-->
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <EditText-->
+<!--                android:id="@+id/name"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textColor="@android:color/black"-->
+<!--                android:hint="esmek"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <EditText-->
+<!--                android:id="@+id/city"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textColor="@android:color/black"-->
+<!--                android:hint="blastek"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <EditText-->
+<!--                android:id="@+id/phone"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textColor="@android:color/black"-->
+<!--                android:hint="ra9m phone"-->
+<!--                android:inputType="phone"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            app:passwordToggleEnabled="true"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/password"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textColor="@android:color/black"-->
+<!--                android:hint="Password"-->
+<!--                android:inputType="textPassword"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            app:passwordToggleEnabled="true"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/confirm_password"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textColor="@android:color/black"-->
+<!--                android:hint="3awed password"-->
+<!--                android:inputType="textPassword"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--        <Button-->
+<!--            android:id="@+id/submit_button"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:background="@drawable/button_bg"-->
+<!--            android:text="Sajel M3ana"-->
+<!--            android:layout_margin="20dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"/>-->
+<!--    </LinearLayout>-->
+
+<!--</ScrollView>-->
